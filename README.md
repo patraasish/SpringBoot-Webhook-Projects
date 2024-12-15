@@ -19,3 +19,17 @@ Endpoint:
 
 POST /webhook/receive - Listens for alerts sent from Alert Producer.
 
+Trigger an alert from Producer:
+===============================
+Use Postman or cURL to send a POST request to:
+
+URL: http://localhost:8081/alerts/trigger
+Method: POST
+Headers: Content-Type: application/json
+Body:
+{
+    "event": "disk_space_low",
+    "message": "Disk space is running low on Server-01"
+}
+
+
